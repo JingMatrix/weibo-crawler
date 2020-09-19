@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
 import codecs
@@ -559,18 +559,18 @@ class Weibo(object):
     def print_one_weibo(self, weibo):
         """打印一条微博"""
         try:
-            logger.info(u'微博id：%d', weibo['id'])
+            # logger.info(u'微博id：%d', weibo['id'])
             logger.info(u'微博正文：%s', weibo['text'])
-            logger.info(u'原始图片url：%s', weibo['pics'])
-            logger.info(u'微博位置：%s', weibo['location'])
-            logger.info(u'发布时间：%s', weibo['created_at'])
-            logger.info(u'发布工具：%s', weibo['source'])
-            logger.info(u'点赞数：%d', weibo['attitudes_count'])
-            logger.info(u'评论数：%d', weibo['comments_count'])
-            logger.info(u'转发数：%d', weibo['reposts_count'])
-            logger.info(u'话题：%s', weibo['topics'])
-            logger.info(u'@用户：%s', weibo['at_users'])
-            logger.info(u'url：https://m.weibo.cn/detail/%d', weibo['id'])
+            # logger.info(u'原始图片url：%s', weibo['pics'])
+            # logger.info(u'微博位置：%s', weibo['location'])
+            # logger.info(u'发布时间：%s', weibo['created_at'])
+            # logger.info(u'发布工具：%s', weibo['source'])
+            # logger.info(u'点赞数：%d', weibo['attitudes_count'])
+            # logger.info(u'评论数：%d', weibo['comments_count'])
+            # logger.info(u'转发数：%d', weibo['reposts_count'])
+            # logger.info(u'话题：%s', weibo['topics'])
+            # logger.info(u'@用户：%s', weibo['at_users'])
+            # logger.info(u'url：https://m.weibo.cn/detail/%d', weibo['id'])
         except OSError:
             pass
 
@@ -1015,7 +1015,7 @@ class Weibo(object):
         """获取全部微博"""
         try:
             self.get_user_info()
-            self.print_user_info()
+            # self.print_user_info()
             since_date = datetime.strptime(self.user_config['since_date'],
                                            '%Y-%m-%d')
             today = datetime.strptime(str(date.today()), '%Y-%m-%d')
